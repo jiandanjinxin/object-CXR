@@ -18,11 +18,24 @@
 ## Background
 Analyzing chest X-rays is a common clinical approach for diagnosing pulmonary and heart diseases. However, foreign objects are occasionally presented on chest X-ray images, especially in rural and remote locations where standard filming guidances are not strictly followed. Foreign objects on chest X-rays may obscure pathological finds, thus increasing false negative diagnosis. They may also confuse junior radiologists from real pathological findings, e.g. buttons are visually similar to nodules on chest X-ray, thus increasing false positive diagnosis. Based on statistics from our (JF Healthcare) telemedicine platform, nearly one third of the uploaded chest X-rays from township hospitals do not qualify for diagnosis, and interference from foreign objects is the largest contributing factor. Before we develop our own detection system, our radiologists have to manually check the quality of the chest X-ray and promote re-filming if foreign objects within the lung field are presented. An algorithm based foreign object detection system could automatically promote re-filming, thus significantly reduce the cost and save radiologists' time for more diagnosis, which has been noticed before (L Hogeweg, 2013, Medical Physics).
 
+胸部X线是临床最常见的影像诊断，是早期发现肺肿瘤，肺结核，肺炎等各类呼吸系统疾病的重要方式。但是由于影像技师的操作手法以及病人的配合程度，胸部X线图像上常常存在体外异物的遮挡并干扰诊断，尤其是在农村和偏远地区。
+九峰医疗影像大数据平台上统计发现，从乡镇卫生院上传的胸部X线影像中有近三分之一不符合诊断条件，其中来自体外异物的干扰是最主要的因素。一套能够自动检测体外异物并提示重新拍摄的人工智能系统能显著节省远程会诊影像医生花费在图像质控上的时间，并使其专注于疾病诊断（L Hogeweg 2013，Medical Physics）
+
+
+
+
 We provide a large dataset of chest X-rays with strong annotations of foreign objects, and the competition for automatic detection of foreign objects. Specifically, 5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects are provided. All the chest X-ray images were filmed in township hospitals in China and collected through our telemedicine platform. Foreign objects within the lung field of each chest X-ray are annotated with bounding boxes, ellipses or masks depending on the shape of the objects.
 
 Detecting foreign objects is particularly challenging for deep learning (DL) based systems, as specific types of objects presented in the test set may be rarely or never seen in the training set, thus posing a few-shot/zero-shot learning problem. We hope this open dataset and challenge could both help the development of automatic foreign objects detection system, and promote the general research of object detection on chest X-rays, as large scale chest X-ray datasets with strong annotations are limited to the best of our knowledge. 
 
 object-CXR challenge is going to be hosted at [MIDL 2020](https://2020.midl.io/).
+
+
+
+
+
+
+
 
 ## Data
 5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects were filmed and collected from about 300 township hosiptials in China. 12 medically-trained radiologists with 1 to 3 years of experience annotated all the images. Each annotator manually annotates the potential foreign objects on a given chest X-ray presented within the lung field. Foreign objects were annotated with bounding boxes, bounding ellipses or masks depending on the shape of the objects. Support devices were excluded from annotation. A typical frontal chest X-ray with foreign objects annotated looks like this:
