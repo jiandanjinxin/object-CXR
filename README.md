@@ -38,6 +38,9 @@ object-CXR challenge is going to be hosted at [MIDL 2020](https://2020.midl.io/)
 
 
 ## Data
+
+object-CXR大赛提供九峰医疗影像大数据平台上来自于中国300多家乡镇卫生院的10000例胸部正位X线图像。其中5000例肺野内包含体外异物，并由12位1至3年经验的影像科医生精细标画出体外异物的具体位置，如矩形框，椭圆，或者mask，另外5000例不包含体外异物。
+
 5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects were filmed and collected from about 300 township hosiptials in China. 12 medically-trained radiologists with 1 to 3 years of experience annotated all the images. Each annotator manually annotates the potential foreign objects on a given chest X-ray presented within the lung field. Foreign objects were annotated with bounding boxes, bounding ellipses or masks depending on the shape of the objects. Support devices were excluded from annotation. A typical frontal chest X-ray with foreign objects annotated looks like this:
 ![annotation](annotation.png)
 We randomly split the 10000 images into training, validation and test dataset:
